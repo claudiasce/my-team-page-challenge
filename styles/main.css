@@ -43,16 +43,16 @@
 body {
     display                 : flex;
     flex-direction          : column;
-    align-content: center;
+    /* align-content           : center; */
     min-height              : 100vh;
     background-color        : var(--bgd-color);
 }
 
 .content-wrapper {
-    width               : calc(100% - 6rem);
+    width               : calc(100% - 3rem);
     max-width           : var(--max-width);
-    margin-left         : 3rem;
-    margin-right        : 3rem;
+    margin-left         : 1.5rem;
+    margin-right        : 1.5rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -93,7 +93,6 @@ body {
     font-family         : var(--subtitle-font);
     font-size           : var(--subtitle-font-size);
     font-weight         : 600;
-    letter-spacing      : -0.045em;
 }
 
 .page-header p {
@@ -101,7 +100,7 @@ body {
     font-size           : var(--description-font-size);
     font-weight         : 400;
     letter-spacing      : -0.045em;
-    max-width           : 70%;
+    /* max-width           : 100%; */
 }
 
 @media screen and (min-width: 720px) {
@@ -131,29 +130,26 @@ main {
 main .content {
     display                     : grid;
     grid-template-columns       : repeat(2, 1fr);
-    /* grid-template-rows          : repeat(12, 1fr); */
+    grid-template-rows          : repeat(2, 1fr);
     justify-content             : end;
-    /* gap                         : 2rem; */
     padding                     : 2rem 0;
-}
+} 
 
-@media screen and (min-width: 720px) {
+ @media screen and (min-width: 720px) {
     main .content {
         grid-template-columns       : repeat(3, 1fr);
     }
-    
+     
 }
 
-img {
-    width: 100%;
-}
 
 .card-container {
     display: grid;
-    grid-template-columns: 1fr 20px;
+    grid-template-columns: 1fr 25px;
     grid-template-rows: 1fr 50px;
-    width: 100px;
-    height: 50;
+    gap: 0.5rem;
+    width: 156px;
+    justify-content: end;
 }
 
 main .card-container .card-full-name {
@@ -171,6 +167,10 @@ main .card-container .card-roll {
 
 }
 
+
+main .card-container img {
+    width: 100%;
+}
 
 @media screen and (min-width: 1024px) {
     main .card-container .card-full-name {
